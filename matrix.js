@@ -14,6 +14,12 @@ class Matrix {
         }
     }
 
+    randomize() {
+        this.map((elm, i, j) => {
+            return Math.random() * 2 - 1;
+        })
+    }
+
     map(func) {
         this.data = this.data.map((arr, i) => {
             return arr.map((num, j) => {
