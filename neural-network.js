@@ -20,7 +20,7 @@ class NeuralNetwork {
         this.weigths_ho.randomize()
     }
 
-    feedforward(input) {
+    feedforward(arr) {
         // input -> hidden
         let input= Matrix.arrayToMatrix(arr);
 

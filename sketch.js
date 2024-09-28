@@ -3,8 +3,9 @@ function setup() {
     background(0);
 
     var nn = new NeuralNetwork(1, 3, 1)
+    var arr = [1, 2];
 
-    console.log(nn)
+    nn.feedforward(arr)
 }
 
 function draw() {
