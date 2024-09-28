@@ -16,5 +16,10 @@ class NeuralNetwork {
         this.weigths_ho.randomize()
     }
 
-    feedforward(input) {}
+    feedforward(input) {
+        let input= Matrix.arrayToMatrix(arr);
+
+        let hidden = Matrix.multiply(this.weigths_ih, input);
+        hidden = Matrix.add(hidden, this.bias_ih);
+    }
 }
