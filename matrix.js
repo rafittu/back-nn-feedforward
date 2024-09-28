@@ -14,12 +14,6 @@ class Matrix {
         }
     }
 
-    randomize() {
-        this.map((elm, i, j) => {
-            return Math.random() * 2 - 1;
-        })
-    }
-
     static arrayToMatrix(arr) {
         let matrix = new Matrix(arr.length, 1);
 
@@ -27,6 +21,12 @@ class Matrix {
             return arr[i];
         })
         return matrix;
+    }
+
+    randomize() {
+        this.map((elm, i, j) => {
+            return Math.random() * 2 - 1;
+        })
     }
 
     map(func) {
@@ -40,10 +40,10 @@ class Matrix {
     }
 
     static add(A, B) {
-        var matrix = newMatrix(A.rows, A.cols);
+        var matrix = new Matrix(A.rows, A.cols);
 
         matrix.map((num, i, j) => {
-            return A.daya[i][j] + B.data[i][j]
+            return A.data[i][j] + B.data[i][j]
         });
 
         return matrix;
@@ -53,11 +53,10 @@ class Matrix {
         var matrix = new Matrix(A.rows, B.cols);
 
         matrix.map((num, i, j) => {
-            let sum = 0;
-
-            for(let k = 0; k < B.rows; k++) {
+            let sum = 0
+            for (let k = 0; k < A.cols; k++) {
                 let elm1 = A.data[i][k];
-                let elm2 = B.data[k][j] ;
+                let elm2 = B.data[k][j];
                 sum += elm1 * elm2;
             }
             return sum;

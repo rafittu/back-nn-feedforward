@@ -16,5 +16,5 @@ class NeuralNetwork {
         this.weigths_ho.randomize()
     }
 
-    feedforward() {}
+    feedforward(input) {}
 }
