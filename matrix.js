@@ -20,6 +20,15 @@ class Matrix {
         })
     }
 
+    static arrayToMatrix(arr) {
+        let matrix = new Matrix(arr.length, 1);
+
+        matrix.map((elm, i, j) => {
+            return arr[i];
+        })
+        return matrix;
+    }
+
     map(func) {
         this.data = this.data.map((arr, i) => {
             return arr.map((num, j) => {

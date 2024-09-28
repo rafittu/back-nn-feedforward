@@ -15,4 +15,6 @@ class NeuralNetwork {
         this.weigths_ho = new Matrix(this.o_nodes, this.h_nodes)
         this.weigths_ho.randomize()
     }
+
+    feedforward() {}
 }
