@@ -2,8 +2,7 @@ function setup() {
     createCanvas(500, 500);
     background(0);
 
-    var m = new Matrix(3, 9)
-    console.log(m)
+    var nn = new NeuralNetwork(1, 3, 1)
 }
 
 function draw() {
