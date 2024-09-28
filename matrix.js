@@ -13,4 +13,14 @@ class Matrix {
             this.data.push(arr);
         }
     }
+
+    map(func) {
+        this.data = this.data.map((arr, i) => {
+            return arr.map((num, j) => {
+                return func(num, i, j);
+            })
+        })
+
+        return this;
+    }
 }
