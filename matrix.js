@@ -23,4 +23,14 @@ class Matrix {
 
         return this;
     }
+
+    static add(A, B) {
+        var matrix = newMatrix(A.rows, A.cols);
+
+        matrix.map((num, i, j) => {
+            return A.daya[i][j] + B.data[i][j]
+        });
+
+        return matrix;
+    }
 }
