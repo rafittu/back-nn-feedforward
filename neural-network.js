@@ -27,5 +27,10 @@ class NeuralNetwork {
         let hidden = Matrix.multiply(this.weigths_ih, input);
         hidden = Matrix.add(hidden, this.bias_ih);
         hidden.map(sigmoid)
+
+        // hidden -> output
+        let output = Matrix.multiply(this.weigths_ho, hidden);
+        output = Matrix.add(output, this.bias_ho);
+        output.map(sigmoid)
     }
 }
